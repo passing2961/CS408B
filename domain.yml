@@ -1,0 +1,52 @@
+intents:
+- greet
+- bye
+- thank
+- ask_recommendation
+- user_age
+- user_agreed
+
+entities:
+- location
+- company
+- purpose
+- age
+
+slots:
+  location:
+    type: text
+  company:
+    type: text
+  purpose:
+    type: text
+  age:
+    type: float
+    min_value: 0.0
+    max_value: 100.0
+
+actions:
+- utter_bye
+- utter_help
+- utter_ask_age
+- utter_recommendation
+- utter_default
+
+templates:
+  utter_bye:
+  - text: "즐거운 여행되세요!"
+
+  utter_help:
+  - text: "뭘 도와드릴까요?"
+
+  utter_ask_age:
+  - text: "나이를 알려주세요."
+  
+  utter_recommendation:
+  - text: "{company}에 좋은 카페나 펍을 추천해드릴까요?"
+  
+  utter_default:
+    - text: "Sorry, I can’t deal with that request."
+    - text: "I'm sorry, I can't handle that request."
+    - text: "I can't help you with that, I'm sorry."
+    - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request."  
+    - text: "죄송합니다. 이해하지 못하였습니다."
