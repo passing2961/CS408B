@@ -1,2 +1,4 @@
-# CS408B
-Rasa
+## CS408B
+
+## Language Support (Korean)
+- $ python3 -m spacy download xx
